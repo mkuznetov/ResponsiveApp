@@ -1,0 +1,27 @@
+/**
+ * This class is the controller for the main view for the application. It is specified as
+ * the "controller" of the Main view class.
+ */
+Ext.define('ModernApp.view.main.MainController', {
+    extend: 'Ext.app.ViewController',
+
+    alias: 'controller.main',
+
+    onItemSelected: function (sender, record) {
+        var deviceType = "Unknown";
+        if (Ext.os.is.Phone) {
+            deviceType = "Phone";
+        } else if (Ext.os.is.Tablet) {
+            deviceType = "Tablet";
+        } else if (Ext.os.is.Desktop) {
+            deviceType = "Desktop";
+        }
+        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+    },
+
+    onConfirm: function (choice) {
+        if (choice === 'yes') {
+            //
+        }
+    }
+});

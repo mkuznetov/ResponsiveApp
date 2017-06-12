@@ -1,0 +1,7 @@
+/*
+ * This file contains styling for the tablet List view.
+ */
+
+.bold {
+    font-weight: 400;
+} 

@@ -1,0 +1,26 @@
+
+Ext.define('ModernApp.profile.Phone', {
+    extend: 'Ext.app.Profile',
+
+    config: {
+          name: 'Phone',
+          views: ['ModernApp.view.phone.Main']
+    },
+
+    views: ['ModernApp.view.phone.Main'],
+    //mainView: 'ModernApp.view.phone.Main',
+
+    isActive: function() {
+        console.log("isActive Phone: " + !!Ext.os.is.Phone);
+        return Ext.os.is.Phone;
+    },
+
+    launch: function() {
+        //var mainView = Ext.create('ModernApp.view.phone.Main');
+        //Ext.Viewport.remove(Ext.Viewport.getActiveItem(), true);
+        //Ext.Viewport.add(mainView);
+        //Ext.Viewport.setActiveItem(mainView);
+        console.log("ModernApp.profile.Phone");
+    }
+});
+

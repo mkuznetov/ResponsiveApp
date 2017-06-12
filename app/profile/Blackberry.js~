@@ -1,0 +1,21 @@
+
+Ext.define('ModernApp.profile.Blackberry', {
+    extend: 'Ext.app.Profile',
+
+    config: {
+        views: ['Main']
+    },
+
+    views: ['Main'],
+
+    isActive: function() {
+        return Ext.os.is.BlackBerry;
+    },
+
+    launch: function() {
+//        Ext.create('Main');
+//        Ext.create('ModernApp.view.main.Main');
+        console.log("ModernApp.profile.Tablet");
+    }
+});
+
